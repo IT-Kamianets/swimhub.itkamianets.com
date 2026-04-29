@@ -2,30 +2,24 @@
   {
     "slug": "homemade-syrnyky-with-sour-cream",
     "categorySlug": "Pizza",
-    "title": "Homemade syrnyky with sour cream",
-    "description": "Golden cottage cheese pancakes served with sour cream.",
     "price": 140,
-    "labels": ["200g"],
-    "fullDescription": "Golden cottage cheese pancakes served with sour cream...",
-    "suggested": ["espresso", "americano"],
+    "labels": [
+      "200g"
+    ],
     "cookTimeMinutes": 20,
     "caloriesKcal": 420,
-    "portion": "200g",
-    "allergens": ["cappuccino"]
+    "portion": "200g"
   },
   {
     "slug": "cappuccino",
     "categorySlug": "Coffee",
-    "title": "Cappuccino",
-    "description": "Espresso with steamed milk and foam.",
     "price": 50,
-    "labels": ["350ml"],
-    "fullDescription": "Espresso with steamed milk and foam...",
-    "suggested": ["homemade-syrnyky-with-sour-cream"],
+    "labels": [
+      "350ml"
+    ],
     "cookTimeMinutes": 5,
     "caloriesKcal": 110,
-    "portion": "350ml",
-    "allergens": ["milk"]
+    "portion": "350ml"
   },
   {
     "slug": "margarita",
@@ -40,5 +34,12 @@
     "image": "assets/images/pizza/pepperoni.jpg",
     "price": 210,
     "weight": 500
+  },
+  {
+    "slug": "four-cheeses",
+    "categorySlug": "Pizza",
+    "image": "assets/images/pizza/4cheeses.jpg",
+    "price": 240,
+    "weight": 480
   }
 ]
