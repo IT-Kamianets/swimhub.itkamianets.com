@@ -1,9 +1,9 @@
 [
 	{
-		"name": "Breakfasts",
-		"description": "Morning meals and light starters.",
+		"name": "Pizza",
+		"description": "Найкраща піца в місті.",
 		"section": "food",
-		"slug": "breakfasts"
+		"slug": "pizza"
 	},
 	{
 		"name": "Coffee",
