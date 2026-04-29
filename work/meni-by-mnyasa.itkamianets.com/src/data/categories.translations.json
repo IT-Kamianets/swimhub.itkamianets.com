@@ -1,6 +1,6 @@
 [
   {
-    "slug": "pizza",
+    "slug": "Pizza",
     "document": "itemCategory",
     "data": {
       "name": {
@@ -14,7 +14,7 @@
     }
   },
   {
-    "slug": "coffee",
+    "slug": "Coffee",
     "document": "itemCategory",
     "data": {
       "name": {
@@ -28,7 +28,7 @@
     }
   },
   {
-    "slug": "pasta",
+    "slug": "Pasta",
     "document": "itemCategory",
     "data": {
       "name": {

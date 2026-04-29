@@ -3,12 +3,12 @@
 		"name": "Pizza",
 		"description": "Найкраща піца в місті.",
 		"section": "food",
-		"slug": "pizza"
+		"slug": "Pizza"
 	},
 	{
 		"name": "Coffee",
 		"description": "Hot and cold coffee drinks.",
 		"section": "drinks",
-		"slug": "coffee"
+		"slug": "Coffee"
 	}
 ]
