@@ -1,7 +1,7 @@
 [
 	{
 		"slug": "homemade-syrnyky-with-sour-cream",
-		"categorySlug": "breakfasts",
+		"categorySlug": "Pizza",
 		"title": "Homemade syrnyky with sour cream",
 		"description": "Golden cottage cheese pancakes served with sour cream.",
 		"price": 140,
@@ -15,7 +15,7 @@
 	},
 	{
 		"slug": "cappuccino",
-		"categorySlug": "coffee",
+		"categorySlug": "Coffee",
 		"title": "Cappuccino",
 		"description": "Espresso with steamed milk and foam.",
 		"price": 50,
