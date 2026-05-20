@@ -2,26 +2,26 @@
 	color-scheme: light;
 
 	/* brand / actions */
-	--c-primary: #a97845;
-	--c-primary-hover: #92663a;
-	--c-secondary: #5b4030;
-	--c-secondary-hover: #483225;
+	--c-primary: #0ea5b7;
+	--c-primary-hover: #0b8796;
+	--c-secondary: #075985;
+	--c-secondary-hover: #064766;
 
 	/* surfaces */
-	--c-bg-primary: #f3ebe2;
-	--c-bg-secondary: #fff8f1;
-	--c-bg-tertiary: #e7d8c7;
+	--c-bg-primary: #edf9fb;
+	--c-bg-secondary: #ffffff;
+	--c-bg-tertiary: #d8f0f5;
 
 	/* content */
-	--c-text-primary: #6f5847;
-	--c-text-secondary: #2f2118;
-	--c-text-muted: #9a816d;
-	--c-placeholder: #9a816db3;
+	--c-text-primary: #315263;
+	--c-text-secondary: #102f3d;
+	--c-text-muted: #6d8996;
+	--c-placeholder: #6d8996b3;
 
 	/* borders & elevation */
-	--c-border: #d6c1ad;
-	--shadow-sm: 0 1px 2px rgba(47, 33, 24, 0.08);
-	--shadow-md: 0 10px 30px rgba(47, 33, 24, 0.16);
+	--c-border: #b7dce5;
+	--shadow-sm: 0 1px 2px rgba(16, 47, 61, 0.08);
+	--shadow-md: 0 10px 30px rgba(16, 47, 61, 0.16);
 
 	/* typography */
 	--ff-base: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -59,36 +59,36 @@
 	--motion-slow: 0.4s;
 
 	/* focus */
-	--focus-ring: 0 0 0 3px rgba(169, 120, 69, 0.24);
+	--focus-ring: 0 0 0 3px rgba(14, 165, 183, 0.24);
 }
 
 html[data-mode='dark'] {
 	color-scheme: dark;
 
 	/* brand / actions */
-	--c-primary: #c3925f;
-	--c-primary-hover: #d4a675;
-	--c-secondary: #f0e0cf;
-	--c-secondary-hover: #fff3e7;
+	--c-primary: #38c7d9;
+	--c-primary-hover: #74ddea;
+	--c-secondary: #bdefff;
+	--c-secondary-hover: #e0f8ff;
 
 	/* surfaces */
-	--c-bg-primary: #1c140f;
-	--c-bg-secondary: #281d16;
-	--c-bg-tertiary: #35271d;
+	--c-bg-primary: #071923;
+	--c-bg-secondary: #0d2633;
+	--c-bg-tertiary: #153849;
 
 	/* borders & elevation */
-	--c-border: #4d392b;
+	--c-border: #1f5266;
 	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
 	--shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
 
 	/* content */
-	--c-text-primary: #ccb39a;
-	--c-text-secondary: #fff7ef;
-	--c-text-muted: #a88f78;
-	--c-placeholder: #a88f78cc;
+	--c-text-primary: #bbdce6;
+	--c-text-secondary: #f2fbff;
+	--c-text-muted: #8fb6c4;
+	--c-placeholder: #8fb6c4cc;
 
 	/* focus */
-	--focus-ring: 0 0 0 3px rgba(195, 146, 95, 0.28);
+	--focus-ring: 0 0 0 3px rgba(56, 199, 217, 0.28);
 }
 
 html[data-density='compact'] {

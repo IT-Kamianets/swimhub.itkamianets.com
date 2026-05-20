@@ -3,58 +3,35 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
 	{
 		path: '',
-		loadComponent: () =>
-			import('./pages/landing/landing.component').then((m) => m.LandingComponent),
+		loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
 	},
 	{
-		path: 'rooms',
-		loadComponent: () => import('./pages/rooms/rooms.component').then((m) => m.RoomsComponent),
+		path: 'swim-basics',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'navigation',
-		loadComponent: () =>
-			import('./pages/navigation/navigation.component').then((m) => m.NavigationComponent),
+		path: 'swimming-styles',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'gallery',
-		loadComponent: () =>
-			import('./pages/gallery/gallery.component').then((m) => m.GalleryComponent),
+		path: 'training-plans',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'dish/:slug',
-		loadComponent: () => import('./pages/dish/dish.component').then((m) => m.DishComponent),
+		path: 'glossary',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'sales',
-		loadComponent: () => import('./pages/sales/sales.component').then((m) => m.SalesComponent),
+		path: 'health-benefits',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'articles',
-		loadComponent: () =>
-			import('./pages/articles/articles.component').then((m) => m.ArticlesComponent),
+		path: 'swim-safety',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
-		path: 'reviews',
-		loadComponent: () =>
-			import('./pages/reviews/reviews.component').then((m) => m.ReviewsComponent),
-	},
-	{
-		path: 'events',
-		loadComponent: () => import('./pages/events/events.component').then((m) => m.EventsComponent),
-	},
-	{
-		path: 'jobs',
-		loadComponent: () => import('./pages/jobs/jobs.component').then((m) => m.JobsComponent),
-	},
-	{
-		path: 'socials',
-		loadComponent: () =>
-			import('./pages/socials/socials.component').then((m) => m.SocialsComponent),
-	},
-	{
-		path: 'favorites',
-		loadComponent: () =>
-			import('./pages/favorites/favorites.component').then((m) => m.FavoritesComponent),
+		path: 'famous-swimmers',
+		loadComponent: () => import('./pages/topic/topic.component').then((m) => m.TopicComponent),
 	},
 	{
 		path: '**',

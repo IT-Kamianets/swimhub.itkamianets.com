@@ -1,0 +1,111 @@
+<main class="mx-auto max-w-[var(--container)] px-4 pb-10 pt-4 sm:px-6 sm:pt-6">
+	<section
+		class="overflow-hidden rounded-[1.5rem] border border-[var(--c-border)] bg-[linear-gradient(135deg,#e7fbff_0%,#ffffff_52%,#d9f7ff_100%)] shadow-[var(--shadow-sm)]"
+	>
+		<div class="grid gap-8 px-5 py-8 sm:px-8 sm:py-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+			<div class="max-w-2xl">
+				<p class="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--c-secondary)]">
+					{{ 'Swim Guide' | swimTranslate }}
+				</p>
+				<h1 class="mt-3 text-4xl font-semibold leading-tight text-[var(--c-text-secondary)] sm:text-6xl">
+					{{ 'Learn swimming, train smarter, and stay safe in the water.' | swimTranslate }}
+				</h1>
+				<p class="mt-4 max-w-xl text-base leading-7 text-[var(--c-text-primary)]">
+					{{
+						'A beginner-friendly swimming guide with simple lessons, training ideas, safety rules, health notes, and inspiring swimmer profiles.'
+							| swimTranslate
+					}}
+				</p>
+				<div class="mt-6 flex flex-wrap gap-3">
+					<a
+						class="inline-flex items-center gap-2 rounded-full bg-[var(--c-secondary)] px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[var(--c-secondary-hover)]"
+						routerLink="/swim-basics"
+					>
+						{{ 'Start learning' | swimTranslate }}
+						<span class="material-symbols-outlined text-[20px]" aria-hidden="true">
+							arrow_forward
+						</span>
+					</a>
+					<a
+						class="inline-flex items-center gap-2 rounded-full border border-[var(--c-border)] bg-white/70 px-5 py-3 text-sm font-semibold text-[var(--c-text-secondary)] transition-colors duration-200 hover:bg-white"
+						routerLink="/training-plans"
+					>
+						{{ 'View plans' | swimTranslate }}
+					</a>
+				</div>
+			</div>
+
+			<div class="grid grid-cols-2 gap-3">
+				<div class="rounded-[1.2rem] bg-white/70 p-4 shadow-[var(--shadow-sm)]">
+					<span class="material-symbols-outlined text-4xl text-[var(--c-secondary)]" aria-hidden="true">
+						pool
+					</span>
+					<p class="mt-4 text-2xl font-semibold text-[var(--c-text-secondary)]">4</p>
+					<p class="text-sm text-[var(--c-text-primary)]">
+						{{ 'main strokes explained' | swimTranslate }}
+					</p>
+				</div>
+				<div class="rounded-[1.2rem] bg-white/70 p-4 shadow-[var(--shadow-sm)]">
+					<span class="material-symbols-outlined text-4xl text-[var(--c-secondary)]" aria-hidden="true">
+						health_and_safety
+					</span>
+					<p class="mt-4 text-2xl font-semibold text-[var(--c-text-secondary)]">8</p>
+					<p class="text-sm text-[var(--c-text-primary)]">
+						{{ 'simple safety rules' | swimTranslate }}
+					</p>
+				</div>
+				<div class="col-span-2 rounded-[1.2rem] bg-[var(--c-secondary)] p-5 text-white shadow-[var(--shadow-md)]">
+					<p class="text-sm font-semibold uppercase tracking-[0.16em] text-white/75">
+						{{ 'Beginner-first' | swimTranslate }}
+					</p>
+					<p class="mt-3 text-2xl font-semibold">
+						{{ 'Short cards, clear terms, practical tips.' | swimTranslate }}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="mt-6">
+		<div class="mb-3 flex items-end justify-between gap-4 px-1">
+			<div>
+				<p class="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--c-secondary)]">
+					{{ 'Explore' | swimTranslate }}
+				</p>
+				<h2 class="mt-1 text-2xl font-semibold text-[var(--c-text-secondary)]">
+					{{ 'Main sections' | swimTranslate }}
+				</h2>
+			</div>
+		</div>
+
+		<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+			@for (topic of topics; track topic.route) {
+				<a
+					class="group flex min-h-40 flex-col rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)] transition-transform duration-200 hover:-translate-y-0.5"
+					[routerLink]="topic.route"
+				>
+					<div class="flex items-start justify-between gap-3">
+						<span
+							class="material-symbols-outlined rounded-full bg-[var(--c-bg-tertiary)] p-3 text-[28px] text-[var(--c-secondary)]"
+							aria-hidden="true"
+						>
+							{{ topic.icon }}
+						</span>
+						<span
+							class="material-symbols-outlined text-[22px] text-[var(--c-text-muted)] transition-transform duration-200 group-hover:translate-x-1"
+							aria-hidden="true"
+						>
+							arrow_forward
+						</span>
+					</div>
+					<h3 class="mt-5 text-xl font-semibold text-[var(--c-text-secondary)]">
+						{{ topic.title | swimTranslate }}
+					</h3>
+					<p class="mt-2 text-sm leading-6 text-[var(--c-text-primary)]">
+						{{ topic.description | swimTranslate }}
+					</p>
+				</a>
+			}
+		</div>
+	</section>
+</main>

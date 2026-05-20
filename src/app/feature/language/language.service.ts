@@ -1,6 +1,5 @@
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
-import { TranslateService } from '@wawjs/ngx-translate';
 
 import { environment } from '../../../environments/environment';
 import { LANGUAGES } from './language.const';
@@ -10,7 +9,6 @@ import { LanguageCode } from './language.type';
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
 	private readonly _doc = inject(DOCUMENT);
-	private readonly _translateService = inject(TranslateService);
 	private readonly _isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 	private readonly _storageKey = 'app-language';
 
@@ -32,7 +30,6 @@ export class LanguageService {
 
 	setLanguage(language: LanguageCode) {
 		this.language.set(language);
-		void this._translateService.setLanguage(language);
 		this._doc.documentElement.lang = this.getLanguage(language).htmlLang;
 
 		if (this._isBrowser) {

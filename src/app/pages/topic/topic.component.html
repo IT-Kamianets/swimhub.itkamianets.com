@@ -1,0 +1,265 @@
+<main class="mx-auto max-w-[var(--container)] px-4 pb-10 pt-4 sm:px-6 sm:pt-6">
+	<section
+		class="rounded-[1.5rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5 shadow-[var(--shadow-sm)] sm:p-7"
+	>
+		<a
+			class="inline-flex items-center gap-2 text-sm font-semibold text-[var(--c-secondary)]"
+			routerLink="/"
+		>
+			<span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_back</span>
+			{{ 'Home' | swimTranslate }}
+		</a>
+
+		<div class="mt-6 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+			<div class="max-w-3xl">
+				<span
+					class="material-symbols-outlined rounded-full bg-[var(--c-bg-tertiary)] p-3 text-[32px] text-[var(--c-secondary)]"
+					aria-hidden="true"
+				>
+					{{ page().icon }}
+				</span>
+				<h1 class="mt-4 text-4xl font-semibold leading-tight text-[var(--c-text-secondary)] sm:text-5xl">
+					{{ page().title | swimTranslate }}
+				</h1>
+				<p class="mt-3 text-base leading-7 text-[var(--c-text-primary)]">
+					{{ page().intro | swimTranslate }}
+				</p>
+			</div>
+		</div>
+	</section>
+
+	@if (page().sections?.length) {
+		<section class="mt-5 grid gap-3 sm:grid-cols-2">
+			@for (section of page().sections; track section.title) {
+				<article class="rounded-[1.1rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5">
+					<span class="material-symbols-outlined text-[28px] text-[var(--c-secondary)]" aria-hidden="true">
+						{{ section.icon }}
+					</span>
+					<h2 class="mt-3 text-xl font-semibold text-[var(--c-text-secondary)]">
+						{{ section.title | swimTranslate }}
+					</h2>
+					<p class="mt-2 text-sm leading-6 text-[var(--c-text-primary)]">
+						{{ section.text | swimTranslate }}
+					</p>
+				</article>
+			}
+		</section>
+	}
+
+	@if (page().equipment?.length) {
+		<section class="mt-6">
+			<h2 class="text-2xl font-semibold text-[var(--c-text-secondary)]">
+				{{ 'Beginner equipment' | swimTranslate }}
+			</h2>
+			<div class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+				@for (item of page().equipment; track item.title) {
+					<article class="rounded-[1rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-4">
+						<span class="material-symbols-outlined text-[26px] text-[var(--c-secondary)]" aria-hidden="true">
+							{{ item.icon }}
+						</span>
+						<h3 class="mt-2 font-semibold text-[var(--c-text-secondary)]">
+							{{ item.title | swimTranslate }}
+						</h3>
+						<p class="mt-1 text-sm leading-6 text-[var(--c-text-primary)]">
+							{{ item.description | swimTranslate }}
+						</p>
+					</article>
+				}
+			</div>
+		</section>
+	}
+
+	@if (page().mistakes?.length) {
+		<section class="mt-6">
+			<h2 class="text-2xl font-semibold text-[var(--c-text-secondary)]">
+				{{ 'Common beginner mistakes' | swimTranslate }}
+			</h2>
+			<div class="mt-3 grid gap-3 sm:grid-cols-2">
+				@for (item of page().mistakes; track item.title) {
+					<article class="rounded-[1rem] border border-amber-200 bg-amber-50 p-4">
+						<span class="material-symbols-outlined text-[26px] text-amber-700" aria-hidden="true">
+							{{ item.icon }}
+						</span>
+						<h3 class="mt-2 font-semibold text-amber-950">{{ item.title | swimTranslate }}</h3>
+						<p class="mt-1 text-sm leading-6 text-amber-900">
+							{{ item.description | swimTranslate }}
+						</p>
+					</article>
+				}
+			</div>
+		</section>
+	}
+
+	@if (page().styles?.length) {
+		<section class="mt-5 grid gap-4 lg:grid-cols-2">
+			@for (style of page().styles; track style.name) {
+				<article class="rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5">
+					<div class="flex items-start justify-between gap-3">
+						<div>
+							<span class="material-symbols-outlined text-[30px] text-[var(--c-secondary)]" aria-hidden="true">
+								{{ style.icon }}
+							</span>
+							<h2 class="mt-3 text-2xl font-semibold text-[var(--c-text-secondary)]">
+								{{ style.name | swimTranslate }}
+							</h2>
+						</div>
+						<span class="rounded-full bg-[var(--c-bg-tertiary)] px-3 py-1 text-xs font-semibold text-[var(--c-secondary)]">
+							{{ style.difficulty | swimTranslate }}
+						</span>
+					</div>
+					<p class="mt-3 text-sm leading-6 text-[var(--c-text-primary)]">
+						{{ style.description | swimTranslate }}
+					</p>
+					<div class="mt-4 grid gap-3">
+						<p>
+							<strong>{{ 'Body position:' | swimTranslate }}</strong>
+							{{ style.bodyPosition | swimTranslate }}
+						</p>
+						<p>
+							<strong>{{ 'Arm movement:' | swimTranslate }}</strong>
+							{{ style.armMovement | swimTranslate }}
+						</p>
+						<p>
+							<strong>{{ 'Leg movement:' | swimTranslate }}</strong>
+							{{ style.legMovement | swimTranslate }}
+						</p>
+						<p>
+							<strong>{{ 'Breathing:' | swimTranslate }}</strong>
+							{{ style.breathing | swimTranslate }}
+						</p>
+						<p class="rounded-[0.9rem] bg-[var(--c-bg-primary)] p-3">
+							<strong>{{ 'Beginner tip:' | swimTranslate }}</strong>
+							{{ style.beginnerTip | swimTranslate }}
+						</p>
+					</div>
+				</article>
+			}
+		</section>
+	}
+
+	@if (page().plans?.length) {
+		<section class="mt-5 grid gap-4 lg:grid-cols-3">
+			@for (plan of page().plans; track plan.title) {
+				<article class="rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5">
+					<span class="material-symbols-outlined text-[30px] text-[var(--c-secondary)]" aria-hidden="true">
+						{{ plan.icon }}
+					</span>
+					<h2 class="mt-3 text-2xl font-semibold text-[var(--c-text-secondary)]">
+						{{ plan.title | swimTranslate }}
+					</h2>
+					<div class="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-[var(--c-secondary)]">
+						<span class="rounded-full bg-[var(--c-bg-tertiary)] px-3 py-1">
+							{{ plan.level | swimTranslate }}
+						</span>
+						<span class="rounded-full bg-[var(--c-bg-tertiary)] px-3 py-1">
+							{{ plan.duration | swimTranslate }}
+						</span>
+					</div>
+					<p class="mt-4 text-sm leading-6">
+						<strong>{{ 'Goal:' | swimTranslate }}</strong>
+						{{ plan.goal | swimTranslate }}
+					</p>
+					<p class="mt-2 text-sm leading-6">
+						<strong>{{ 'Warm-up:' | swimTranslate }}</strong>
+						{{ plan.warmUp | swimTranslate }}
+					</p>
+					<ul class="mt-3 space-y-2 text-sm leading-6">
+						@for (exercise of plan.mainExercises; track exercise) {
+							<li class="rounded-[0.8rem] bg-[var(--c-bg-primary)] px-3 py-2">
+								{{ exercise | swimTranslate }}
+							</li>
+						}
+					</ul>
+					<p class="mt-3 text-sm leading-6">
+						<strong>{{ 'Cool down:' | swimTranslate }}</strong>
+						{{ plan.coolDown | swimTranslate }}
+					</p>
+					<p class="mt-2 text-sm leading-6 text-[var(--c-text-muted)]">
+						{{ plan.notes | swimTranslate }}
+					</p>
+				</article>
+			}
+		</section>
+	}
+
+	@if (page().glossary?.length) {
+		<section class="mt-5 space-y-5">
+			@for (category of glossaryCategories(); track category) {
+				<div>
+					<h2 class="text-2xl font-semibold text-[var(--c-text-secondary)]">
+						{{ category | swimTranslate }}
+					</h2>
+					<div class="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+						@for (item of page().glossary; track item.term) {
+							@if (item.category === category) {
+								<article class="rounded-[1rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-4">
+									<h3 class="text-lg font-semibold text-[var(--c-text-secondary)]">
+										{{ item.term | swimTranslate }}
+									</h3>
+									<p class="mt-2 text-sm leading-6 text-[var(--c-text-primary)]">
+										{{ item.explanation | swimTranslate }}
+									</p>
+								</article>
+							}
+						}
+					</div>
+				</div>
+			}
+		</section>
+	}
+
+	@if (page().benefits?.length || page().rules?.length) {
+		<section class="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+			@for (item of page().benefits ?? page().rules ?? []; track item.title) {
+				<article class="rounded-[1rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-4">
+					<span class="material-symbols-outlined text-[28px] text-[var(--c-secondary)]" aria-hidden="true">
+						{{ item.icon }}
+					</span>
+					<h2 class="mt-3 text-lg font-semibold text-[var(--c-text-secondary)]">
+						{{ item.title | swimTranslate }}
+					</h2>
+					<p class="mt-2 text-sm leading-6 text-[var(--c-text-primary)]">
+						{{ item.description | swimTranslate }}
+					</p>
+				</article>
+			}
+		</section>
+	}
+
+	@if (page().swimmers?.length) {
+		<section class="mt-5 grid gap-4 lg:grid-cols-2">
+			@for (swimmer of page().swimmers; track swimmer.name) {
+				<article class="rounded-[1.2rem] border border-[var(--c-border)] bg-[var(--c-bg-secondary)] p-5">
+					<div class="flex items-start justify-between gap-3">
+						<div>
+							<h2 class="text-2xl font-semibold text-[var(--c-text-secondary)]">
+								{{ swimmer.name | swimTranslate }}
+							</h2>
+							<p class="mt-1 text-sm font-semibold text-[var(--c-secondary)]">
+								{{ swimmer.country | swimTranslate }}
+							</p>
+						</div>
+						<span class="material-symbols-outlined text-[30px] text-[var(--c-secondary)]" aria-hidden="true">
+							emoji_events
+						</span>
+					</div>
+					<p class="mt-4 text-sm leading-6">
+						<strong>{{ 'Events:' | swimTranslate }}</strong>
+						{{ swimmer.events | swimTranslate }}
+					</p>
+					<p class="mt-2 text-sm leading-6 text-[var(--c-text-primary)]">
+						{{ swimmer.biography | swimTranslate }}
+					</p>
+					<p class="mt-3 rounded-[0.9rem] bg-[var(--c-bg-primary)] p-3 text-sm leading-6">
+						<strong>{{ 'Achievements:' | swimTranslate }}</strong>
+						{{ swimmer.achievements | swimTranslate }}
+					</p>
+					<p class="mt-3 text-sm leading-6 text-[var(--c-text-muted)]">
+						<strong>{{ 'Interesting fact:' | swimTranslate }}</strong>
+						{{ swimmer.fact | swimTranslate }}
+					</p>
+				</article>
+			}
+		</section>
+	}
+</main>

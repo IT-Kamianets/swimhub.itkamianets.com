@@ -1,0 +1,55 @@
+import { TopicPageData } from './swim-guide.types';
+
+export const swimmingStyles: TopicPageData = {
+	slug: 'swimming-styles',
+	title: 'Swimming Styles',
+	intro:
+		'Learn the main swimming strokes and how they differ in body position, movement, breathing, and difficulty.',
+	icon: 'pool',
+	styles: [
+		{
+			name: 'Freestyle',
+			description: 'The fastest and most common stroke for fitness swimming.',
+			difficulty: 'Easy',
+			bodyPosition: 'Face down with a long, streamlined body.',
+			armMovement: 'Alternating arm pulls under the body with relaxed recovery over the water.',
+			legMovement: 'Steady flutter kick from the hips.',
+			breathing: 'Turn the head to the side while one arm recovers.',
+			beginnerTip: 'Keep the head low and exhale into the water.',
+			icon: 'speed',
+		},
+		{
+			name: 'Breaststroke',
+			description: 'A calm stroke with symmetrical arm and leg movements.',
+			difficulty: 'Medium',
+			bodyPosition: 'Face down, rising slightly during the breath.',
+			armMovement: 'Both arms sweep out, pull in, then reach forward together.',
+			legMovement: 'Frog kick with heels drawing in and legs pressing back.',
+			breathing: 'Breathe as the arms pull and the chest rises.',
+			beginnerTip: 'Glide briefly after each kick instead of rushing.',
+			icon: 'sync',
+		},
+		{
+			name: 'Backstroke',
+			description: 'A stroke swum on the back with steady rotation.',
+			difficulty: 'Medium',
+			bodyPosition: 'On the back with hips high and eyes upward.',
+			armMovement: 'Alternating arm circles with a pull under the water.',
+			legMovement: 'Flutter kick with relaxed ankles.',
+			breathing: 'Breathing is easier because the face stays above water.',
+			beginnerTip: 'Keep the chin relaxed and avoid sitting up in the water.',
+			icon: 'rotate_left',
+		},
+		{
+			name: 'Butterfly',
+			description: 'A powerful stroke that needs timing, strength, and rhythm.',
+			difficulty: 'Hard',
+			bodyPosition: 'Face down with a wave-like body movement.',
+			armMovement: 'Both arms pull together and recover over the water together.',
+			legMovement: 'Dolphin kick with both legs moving as one.',
+			breathing: 'Breathe forward during the arm recovery.',
+			beginnerTip: 'Learn dolphin kick and body rhythm before full stroke.',
+			icon: 'bolt',
+		},
+	],
+};
