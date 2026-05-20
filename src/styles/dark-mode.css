@@ -1,0 +1,29 @@
+/* Dark mode theme variables */
+html[data-mode='dark'] {
+	color-scheme: dark;
+
+	/* brand / actions */
+	--c-primary: #38c7d9;
+	--c-primary-hover: #74ddea;
+	--c-secondary: #bdefff;
+	--c-secondary-hover: #e0f8ff;
+
+	/* surfaces */
+	--c-bg-primary: #071923;
+	--c-bg-secondary: #0d2633;
+	--c-bg-tertiary: #153849;
+
+	/* borders & elevation */
+	--c-border: #1f5266;
+	--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+	--shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+	/* content */
+	--c-text-primary: #bbdce6;
+	--c-text-secondary: #f2fbff;
+	--c-text-muted: #8fb6c4;
+	--c-placeholder: #8fb6c4cc;
+
+	/* focus */
+	--focus-ring: 0 0 0 3px rgba(56, 199, 217, 0.28);
+}
